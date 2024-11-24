@@ -1,0 +1,6 @@
+#!bin/sh
+[shell]
+args = ["--login", "-c", "tmux attach || tmux"]
+program = "/usr/bin/bash"
+[window]
+opacity = 0.4
