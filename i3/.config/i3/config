@@ -80,14 +80,14 @@ bindsym $mod+m focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
+#bindsym $mod+Down focus down
+#bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
+#bindsym $mod+Shift+k move down
+#bindsym $mod+Shift+l move up
 bindsym $mod+Shift+m move right
 
 # alternatively, you can use the cursor keys:
@@ -170,8 +170,8 @@ assign [class="code" instance="Code"] $ws4
 workspace 1 output primary
 workspace 2 output primary
 
-workspace 3 output DisplayPort-3
-workspace 4 output DisplayPort-3
+# workspace 3 output DisplayPort-3
+# workspace 4 output DisplayPort-3
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -180,8 +180,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 # lock i3
-bindsym $mod+x exec --no-startup-id "$HOME/.config/scripts/i3lock.sh"
-
+bindsym $mod+Shift+l exec --no-startup-id "$HOME/.config/i3/scripts/i3lock.sh"
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -247,7 +246,7 @@ bar {
 }
 
 # Mouse doesn't follow focus automatically
-mouse_warping none 
+mouse_warping none
 
 # Transparency with picom compositor
 exec_always picom -f

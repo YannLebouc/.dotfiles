@@ -22,17 +22,7 @@ if [ -d ~/.bashrc.d ]; then
         fi
     done
 fi
-unset rc
-. "$HOME/.cargo/env"
 
 #aliases
-source /home/lyann/Téléchargements/alacritty/extra/completions/alacritty.bash
 alias dnfup='sudo dnf upgrade -y'
 alias symf='php bin/console'
-# Custom Bash Prompt
-# StackOverflow reference: https://stackoverflow.com/a/35218509/3684641
-# Customisation rules: https://help.ubuntu.com/community/CustomizingBashPrompt
-# parse_git_branch() {
-#   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-# }
-# export PS1="\u@\h:\[\033[34m\]\w\[\033[32m\]\$(parse_git_branch)\[\033[00m\]$ "
